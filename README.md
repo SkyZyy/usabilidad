@@ -2,7 +2,7 @@
 
 ## Protocolo HTTP
 
-#### Web: ISTAC - Mozilla
+### Web: ISTAC - Mozilla
 
 **Qué peticiones desencadena la consulta.**
     
@@ -58,7 +58,7 @@
 
 
 
-#### Web: gobiernodecanarias - Chrome
+### Web: gobiernodecanarias - Chrome
 
 **Qué peticiones desencadena la consulta.**
 
