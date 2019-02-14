@@ -102,9 +102,7 @@
     }
 
 
-Alguna línea de código HTML que se aplique.
+**Alguna línea de código HTML que se aplique.**
   
     <div xmlns="http://www.w3.org/1999/xhtml"></div>
     
-    
-############################################################################
