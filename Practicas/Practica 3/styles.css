@@ -1,0 +1,65 @@
+#wrapper{ 
+    width: 770px; 
+}
+
+body{
+    width: 770px;
+    margin: auto;
+    color: black;
+    font-size: 1.5em;
+    font-family: Arial;    
+}
+
+p{
+    margin-top: 0.5em;
+}
+
+a{
+    color: blue;
+}
+
+.center a:hover{
+    color: red;
+}
+
+a:visited{
+    font-family: Verdana;
+    color: blue;
+}
+
+.header{
+    height: 100px;
+    background-color: #BDBDBD;
+    background-image: url("img/cabecera.jpg");
+}
+
+.center{
+    width: 330px;
+    float: left;
+    margin-left: 20px;
+    text-align: center;
+    background-color: pink;
+}
+
+.center img{
+    width: 330px;
+    height: auto;
+}
+
+.lateral-l{
+    width: 200px;
+    float: left;
+    text-align: center;
+    background-color: yellow;
+}
+
+.lateral-r{
+    width: 200px;
+    float: right;
+    text-align: center;
+    background-color: yellow;
+}
+
+.footer{
+    
+}
