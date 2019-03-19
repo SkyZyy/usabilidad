@@ -1,7 +1,3 @@
-#wrapper{ 
-    width: 770px; 
-}
-
 body{
     width: 770px;
     margin: auto;
@@ -10,35 +6,44 @@ body{
     font-family: Arial;    
 }
 
-p{
+body p{
     margin-top: 0.5em;
 }
 
-a{
+body a{
     color: blue;
 }
 
-.center a:hover{
-    color: red;
-}
-
-a:visited{
+body a:visited{
     font-family: Verdana;
     color: blue;
 }
 
-.header{
+body a:hover{
+    color: red;
+}
+
+header{
     height: 100px;
     background-color: #BDBDBD;
     background-image: url("img/cabecera.jpg");
 }
 
+.lateral-l{
+    width: 200px;
+    height: 1500px;
+    float: left;
+    text-align: center;
+    background-color: #a8a8a8;
+}
+
 .center{
     width: 330px;
+    height: 1500px;
     float: left;
     margin-left: 20px;
     text-align: center;
-    background-color: pink;
+    background-color: #F0F0F0;
 }
 
 .center img{
@@ -46,20 +51,74 @@ a:visited{
     height: auto;
 }
 
-.lateral-l{
-    width: 200px;
-    float: left;
-    text-align: center;
-    background-color: yellow;
+.center table a{
+    color: green;
+}
+
+.center table a:hover{
+    color: blue;
 }
 
 .lateral-r{
     width: 200px;
+    height: 1500px;
     float: right;
     text-align: center;
-    background-color: yellow;
+    background-color: #a8a8a8;
 }
 
-.footer{
-    
+footer{
+    height: 25px;
+    text-align: center;
+    background-color: black;
+    color: #ffffff;
+    margin-top: 1500px;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background-color: #111;
+}
+
+.menu2 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: none;
+}
+
+.menu2 li {
+    float: left;
+}
+
+.menu2 li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu2 li a:hover {
+    background-color: #111;
 }
