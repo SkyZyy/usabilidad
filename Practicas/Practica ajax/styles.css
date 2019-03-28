@@ -1,0 +1,14 @@
+body{
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+h1{
+    text-align: center;
+    color: #1a1a1d;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+hr{
+    width: 15%;
+}
