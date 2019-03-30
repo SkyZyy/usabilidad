@@ -13,7 +13,7 @@
 
 
         <div class="info">
-            <form action="">
+            <form>
                 ¿Que usuario desea consultar?
                 <hr>
                 <input type="number" id="data" placeholder="Introduzca un id">
@@ -21,8 +21,74 @@
             </form>
     
             <button onclick="loaddata(data.value)">Enviar</button>
+
+            <p id="info"></p>
         </div>
         
+        <h1>Sección de scripts</h1>
+
+        <div class="scripts">
+
+            <h2>Cambio de monedas</h2>
+            <form>
+                Selecciones el cambio que desee hacer
+                <hr>
+                <input type="number" id="money">
+                <select id="carlist" form="carform">
+                    <option value="EuroDollar">Euro -> Dolar</option>
+                    <option value="DollarEuro">Dolar -> Euro</option>
+                    <option value="EuroLira">Euro -> Lira</option>
+                    <option value="LiraEuro">Lira -> Euro</option>
+                    <option value="EuroBolivar">Euro -> Bolivar</option>
+                    <option value="BolivarEuro">Bolivar -> Euro</option>
+                </select>              
+            </form>
+
+            <p>
+                Cambio: 
+                <a id="moneyvalue"></a>
+            </p>
+
+            <button onclick="moneychange(money.value, carlist.value)">Cambio</button>
+
+            <h2>Calcular el precio de un JSON</h2>
+            <form>
+                Introduzca el JSON a calcular 
+                <br>
+                (ex: [{"price": 22.2}, {"price": 15}]): 
+                <br>
+                <input type="text" id="products">
+            </form>
+
+            <p>
+                Precio: 
+                <a id="totalprice"></a>
+            </p>
+            <button onclick="price(products.value)">Calcular</button>
+
+            <h2>Contador de elementos de la web:</h2>
+
+            <p>
+                Esta función cuenta los siguientes elementos:
+
+                <ul>
+                    <li>p</li>
+                    <li>ul</li>
+                    <li>a</li>
+                    <li>link</li>
+                </ul>
+            </p>
+
+            <p>
+                El total de elementos es:
+                <a id="totalelements"></a>
+            </p>
+
+        </div>
+
+        <script>
+            info();
+        </script>
     </body>
     
 </html>
