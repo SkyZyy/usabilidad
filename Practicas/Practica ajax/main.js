@@ -1,10 +1,10 @@
 function loaddata(data){
     $.get(
-        "https://jsonplaceholder.typicode.com/comments?postId=1",
+        "https://jsonplaceholder.typicode.com/comments?postId="+ data,
         function (datas){
             var aux= datas;
-            var result = aux.filter(a => a.id == data);
-            document.getElementById("info").innerHTML = "Nombre: " + result[0].name + "<br> Email: " + result[0].email;
+            for (i in aux)
+                document.getElementById("info").insertAdjacentHTML("afterend" , "Nombre: " + aux[i].name + "<br> Email: " + aux[i].email + "<br> <br>");
         }
     );
 }
