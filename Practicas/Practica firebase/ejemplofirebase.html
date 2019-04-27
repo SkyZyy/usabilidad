@@ -1,36 +1,113 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Firebase Cliente Web</title>
-
+  <title>Lecturópolis</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/materialize.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyC9nFxWjN-6MwlfAylMgmPol97PYKe27K8",
-    authDomain: "lecturopolis.firebaseapp.com",
-    databaseURL: "https://lecturopolis.firebaseio.com",
-    projectId: "lecturopolis",
-    storageBucket: "lecturopolis.appspot.com",
-    messagingSenderId: "276006435629"
-  };
 
-  firebase.initializeApp(config);
-  //Referencia a la base de datos
-  var database = firebase.database(); 
-  var referencia = database.ref('Platero y yo');
-  //Escribir un documento
-  referencia.set({
-        Author: 'Juan Ramón Jiménez',
-        Category: 'Narrative',
-        Price: 8,
-    });
-   
-</script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyC9nFxWjN-6MwlfAylMgmPol97PYKe27K8",
+      authDomain: "lecturopolis.firebaseapp.com",
+      databaseURL: "https://lecturopolis.firebaseio.com",
+      projectId: "lecturopolis",
+      storageBucket: "lecturopolis.appspot.com",
+      messagingSenderId: "276006435629"
+    };
+
+    function publish(tittle, author, category, price){
+      firebase.initializeApp(config);
+      //Referencia a la base de datos
+      var database = firebase.database(); 
+      var referencia = database.ref(tittle);
+      //Escribir un documento
+      referencia.set({
+            Author: author,
+            Category: category,
+            Price: price
+      });
+    };
+    
+  </script>
 </head>
 <body>
-    <h1>Test con Firebase</h1>    
-    <p id="infoFire"> </p>
+
+  <header>          
+      <nav>
+          <div class="nav-fixed">
+              
+              <div class="nav-wrapper">
+                  <ul>
+                      <li class="hide-on-med-and-down"><a href="#">Categorías</a></li>
+                      <li class="hide-on-med-and-down"><a href="#">Foro</a></li>
+                      <li><a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a></li>
+                      <li><a href="index.html" style="color:#c3073f; font-family: ave; font-size: 30px;">Lecturópolis</a></li>
+                      <li><a href="#" class="sidenav-trigger"><i class="material-icons">person</i></a></li>
+                      <li class="hide-on-med-and-down"><a href="#">Eventos</a></li>
+                      <li class="hide-on-med-and-down"><a href="#">Contacto</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+      
+      <ul class="sidenav" id="mobile-nav">
+          <li><a href="#">Categorías</a></li>
+          <li><a href="#">Foro</a></li>
+          <li><a href="#">Eventos</a></li>
+          <li><a href="#">Contacto</a></li>
+      </ul>
+    </header>
+
+    <br>
+
+    <div class="row">
+      <div class="col s4"></div>
+      <form class="col s4" style="box-shadow: var(--shadow);">
+
+        <h1  style="color:#c3073f; font-family: ave; font-size: 50px;">Añadir libros</h1>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="Tittle" type="text" class="validate">
+            <label for="Tittle">Titulo</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input id="Author" type="text" class="validate">
+            <label for="Author">Autor</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input id="Price" type="number" class="validate">
+            <label for="Price">Precio</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input id="Category" type="text" class="validate">
+            <label for="Category">Categoría</label>
+          </div>
+
+          <div class="col s1"></div>
+
+          <button class="btn btn-large col s4" onclick="publish(Tittle.value, Author.value, Category.value, Price.value)">Publicar
+            <i class="material-icons right">send</i>
+          </button>
+
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems    );
+        });
+    </script>
 </body>
 </html>
